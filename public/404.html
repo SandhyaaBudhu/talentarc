@@ -1,0 +1,8 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"><title>Redirecting</title>
+<script>
+const base = "/talentarc";
+const path = location.pathname;
+const route = path.startsWith(base + "/") ? path.slice(base.length) : "/";
+location.replace(base + "/?__pages_path=" + encodeURIComponent(route + location.search + location.hash));
+</script></head><body></body></html>
